@@ -208,7 +208,7 @@ Transform:
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 1.134, y: 4.152, z: -1.963}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -274,7 +274,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -464,6 +464,7 @@ MonoBehaviour:
   playerVelocity: {x: 0, y: 0, z: 0}
   groundedPlayer: 0
   mouseSensitivy: 5
+  isOnGround: 0
 --- !u!1 &1294910104
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +526,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -840037777384891287, guid: 1012dbc9ef74a3c499ed10f173120d4a, type: 3}
+  - {fileID: 2100000, guid: 9613e01ec7959d14581da531113c16c9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
