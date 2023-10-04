@@ -14,6 +14,7 @@ public class MouseLook : MonoBehaviour
     private const string yAxis = "Mouse Y";
     private Transform parentTransform;
     public float yRotationLimit = 88f;
+    
 
     private void Start()
     {
