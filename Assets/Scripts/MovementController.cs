@@ -52,8 +52,7 @@ public class Movement : MonoBehaviour
                 gravity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
                 HasDoubleJumped = true;
                 animator.SetTrigger("DoubleJump");
-                GameObject particleSystemObject = Instantiate(jumpParticlePrefab, transform.position, Quaternion.identity);
-                particleSystemObject.transform.localPosition = new Vector3(0, 1, 0);
+                GameObject particleSystemObject = Instantiate(jumpParticlePrefab, transform.position - new Vector3(0, -0.6f, 0), Quaternion.identity);
             }
         }  
         Vector3 movement = move.z *transform.forward  + move.x * transform.right;
