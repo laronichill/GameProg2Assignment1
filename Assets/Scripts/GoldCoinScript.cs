@@ -17,5 +17,6 @@ public class GoldCoinScript : MonoBehaviour
     {
         float rotationAngle = rotationSpeed * Time.deltaTime;
         transform.Rotate(Vector3.forward, rotationAngle);
+        
     }
 }
