@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Movement : MonoBehaviour
     private float runSpeed = 8;
     public bool isOnGround = false;
     public bool HasDoubleJumped = false;
+    public bool canDoubleJumped = false;
+    public Text DoubleJumpedText;
     private Animator animator;
     float speed = 0f;
     public GameObject jumpParticlePrefab;
@@ -39,7 +42,7 @@ public class Movement : MonoBehaviour
 
         if (groundedPlayer) {
             if (Input.GetButtonDown("Jump")){
-                gravity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+                gravity.y += Mathf.Sqrt(jumpHeight * -4.0f * gravityValue);
                 animator.SetBool("IsGrounded", !groundedPlayer);
             } else {
                 gravity.y = -1.0f;
@@ -48,9 +51,11 @@ public class Movement : MonoBehaviour
             }
         } else {
             gravity.y += gravityValue * Time.deltaTime;
-            if (Input.GetButtonDown("Jump") && HasDoubleJumped != true){
-                gravity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            if (Input.GetButtonDown("Jump") && HasDoubleJumped != true && canDoubleJumped){
+                gravity.y += Mathf.Sqrt(jumpHeight * -4.0f * gravityValue);
                 HasDoubleJumped = true;
+                canDoubleJumped = !HasDoubleJumped;
+                DoubleJumpedText.text = "No";
                 animator.SetTrigger("DoubleJump");
                 GameObject particleSystemObject = Instantiate(jumpParticlePrefab, transform.position - new Vector3(0, -0.6f, 0), Quaternion.identity);
             }

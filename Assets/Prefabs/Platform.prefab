@@ -120,3 +120,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinObject: {fileID: 2045373114597903824, guid: 55e2b3c77fe8e6046b0b6d3efa46bd42, type: 3}
+  blueCoinObject: {fileID: 1173504693258184679, guid: 42b22881e55b76e4cadbcf671ee5945c, type: 3}

@@ -11,6 +11,7 @@ public class GoldCoinScript : MonoBehaviour
     void Start()
     {
         gameObject.tag = "Coin";
+        transform.rotation = Quaternion.Euler(90, 0, 0);
     }
 
     void Update()

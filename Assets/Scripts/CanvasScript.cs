@@ -13,7 +13,7 @@ public class CanvasScript : MonoBehaviour
 
     public void RestartGame()
     {
-        // Quit the application
+        SceneManager.LoadScene(0);
        
     }
     public void ExitGame()
