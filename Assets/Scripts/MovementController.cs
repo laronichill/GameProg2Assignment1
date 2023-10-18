@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
-public class Movement : MonoBehaviour
+public class MovementController : MonoBehaviour
 {
     public Vector3 gravity;
     public Vector3 playerVelocity;
